@@ -9,7 +9,7 @@ use App\Http\Requests;
 use App\Models\User;
 use Illuminate\Support\Facades\Redirect;
 use Auth;
-Session_start();
+
 
 
 class AdminController extends Controller

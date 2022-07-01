@@ -11,7 +11,7 @@ use App\Models\Order;
 use App\Models\Shipping;
 use DB;
 
-Session_start();
+
 
 class CheckoutController extends Controller
 {
