@@ -16,7 +16,7 @@ class CreateTblCustomer extends Migration
         Schema::create('tbl_customer', function (Blueprint $table) {
             $table->Increments('customer_id');
             $table->string('customer_name');
-            $table->string('customer_email');
+            $table->string('customer_email')->unique();
             $table->string('customer_password');
             $table->string('customer_phone');
             $table->string('customer_address');
