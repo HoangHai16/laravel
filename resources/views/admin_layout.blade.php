@@ -7,28 +7,28 @@
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- bootstrap-css -->
-<link rel="stylesheet" href="{{asset('/Backend/css/bootstrap.min.css')}}" >
+<link rel="stylesheet" href="{{asset('/backend/css/bootstrap.min.css')}}" >
 <!-- //bootstrap-css -->
 <!-- Custom CSS -->
-<link href="{{asset('/Backend/css/style.css')}}" rel='stylesheet' type='text/css' />
-<link href="{{asset('/Backend/css/style-responsive.css')}}" rel="stylesheet"/>
+<link href="{{asset('/backend/css/style.css')}}" rel='stylesheet' type='text/css' />
+<link href="{{asset('/backend/css/style-responsive.css')}}" rel="stylesheet"/>
 @yield('css')
 <!-- font CSS -->
 <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 <!-- font-awesome icons -->
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-<link rel="stylesheet" href="{{asset('/Backend/css/font.css')}}" type="text/css"/>
+<link rel="stylesheet" href="{{asset('/backend/css/font.css')}}" type="text/css"/>
 <link href="css/font-awesome.css" rel="stylesheet">
-<link rel="stylesheet" href="{{asset('/Backend/css/morris.css')}}" type="text/css"/>
+<link rel="stylesheet" href="{{asset('/backend/css/morris.css')}}" type="text/css"/>
 <!-- calendar -->
-<link rel="stylesheet" href="{{asset('/Backend/css/monthly.css')}}">
+<link rel="stylesheet" href="{{asset('/backend/css/monthly.css')}}">
 
 <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 <!-- //calendar -->
 <!-- //font-awesome icons -->
-<script src="{{asset('/Backend/js/jquery2.0.3.min.js')}}"></script>
-<script src="{{asset('/Backend/js/raphael-min.js')}}"></script>
-<script src="{{asset('/Backend/js/morris.js')}}"></script>
+<script src="{{asset('/backend/js/jquery2.0.3.min.js')}}"></script>
+<script src="{{asset('/backend/js/raphael-min.js')}}"></script>
+<script src="{{asset('/backend/js/morris.js')}}"></script>
 </head>
 <body>
 <section id="container">
@@ -54,7 +54,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <!-- user login dropdown start-->
         <li class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                <img alt="" src="{{asset('/Backend/images/2.png')}}">
+                <img alt="" src="{{asset('/backend/images/2.png')}}">
                 <span class="username">
 					<?php
 						$name = Session::get('admin_name');
@@ -168,13 +168,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </section>
 <!--main content end-->
 </section>
-<script src="{{asset('/Backend/js/bootstrap.js')}}"></script>
+<script src="{{asset('/backend/js/bootstrap.js')}}"></script>
 <script src="js/jquery.dcjqaccordion.2.7.js"></script>
-<script src="{{asset('/Backend/js/scripts.js')}}"></script>
-<script src="{{asset('/Backend/js/jquery.slimscroll.js')}}"></script>
-<script src="{{asset('/Backend/js/jquery.nicescroll.js')}}"></script>
+<script src="{{asset('/backend/js/scripts.js')}}"></script>
+<script src="{{asset('/backend/js/jquery.slimscroll.js')}}"></script>
+<script src="{{asset('/backend/js/jquery.nicescroll.js')}}"></script>
 <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/flot-chart/excanvas.min.js"></script><![endif]-->
-<script src="{{asset('/Backend/js/jquery.scrollTo.js')}}"></script>
+<script src="{{asset('/backend/js/jquery.scrollTo.js')}}"></script>
 @yield('js')
 <!-- morris JavaScript -->
 <script>
@@ -233,7 +233,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	});
 	</script>
 <!-- calendar -->
-	<script type="text/javascript" src="{{asset('/Backend/js/monthly.js')}}"></script>
+	<script type="text/javascript" src="{{asset('/backend/js/monthly.js')}}"></script>
 	<script type="text/javascript">
 		$(window).load( function() {
 
