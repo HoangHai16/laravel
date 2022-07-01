@@ -8,6 +8,7 @@ use Cart;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Redirect;
 use App\Models\Order;
+use App\Models\OrderDetail;
 use App\Models\Payment;
 use App\Models\Product;
 use App\Models\Shipping;
@@ -114,12 +115,12 @@ class CheckoutController extends Controller
         foreach ($content as $item) {
             $order_d_data = array();
             $order_d_data['order_id'] = $order_id;
-            $order_d_data['product_id'] = $v_content->id;
-            $order_d_data['product_name'] = $v_content->name;
-            $order_d_data['product_price'] = $v_content->price;
-            $order_d_data['product_sales_quantity'] = $v_content->qty;
+            $order_d_data['product_id'] = $item->id;
+            $order_d_data['product_name'] = $item->name;
+            $order_d_data['product_price'] = $item->price;
+            $order_d_data['product_sales_quantity'] = $item->qty;
             DB::table('tbl_order_details')->insert($order_d_data);
-            Product::find($v_content->id)->decrement('quantity', $v_content->qty);
+            Product::find($item->id)->decrement('quantity', $item->qty);
         }
 
         if ($data['payment_method'] == Payment::METHOD_ATM) {
@@ -186,6 +187,10 @@ class CheckoutController extends Controller
     }
     public function delete_order($orderId)
     {
+        if (Order::where('order_id', $orderId)->delete()) {
+            session()->flash('success', 'Xóa đơn hàng thành công');
+        }
+
         // DB::table('tbl_order')->where('order_id',$orderId)->delete();
         // DB::table('tbl_order')
         // ->join('tbl_order_details','tbl_order_details.order_id','=','tbl_order.order_id')

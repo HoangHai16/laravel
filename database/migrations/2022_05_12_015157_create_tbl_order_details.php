@@ -18,7 +18,7 @@ class CreateTblOrderDetails extends Migration
             $table->integer('order_id');
             $table->integer('product_id');
             $table->string('product_name');
-            $table->double('product_price');
+            $table->double('product_price'); // column price chuyen ve double. total, quantity chuyen ve int
             $table->integer('product_sales_quantity');
             $table->timestamps();
         });
