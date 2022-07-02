@@ -181,7 +181,9 @@ class CheckoutController extends Controller
             ->join('tbl_customer', 'tbl_customer.customer_id', '=', 'tbl_order.customer_id')
             ->join('tbl_shipping', 'tbl_shipping.shipping_id', '=', 'tbl_order.shipping_id')
             ->join('tbl_order_details', 'tbl_order_details.order_id', '=', 'tbl_order.order_id')
-            ->select('tbl_order.*', 'tbl_customer.*', 'tbl_shipping.*', 'tbl_order_details.*')->first();
+            ->select('tbl_order.*', 'tbl_customer.*', 'tbl_shipping.*', 'tbl_order_details.*')
+            ->where('tbl_order.order_id', $orderId)
+            ->first();
 
         return view('admin.view_order', $order_by_id);
     }

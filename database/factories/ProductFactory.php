@@ -21,7 +21,7 @@ class ProductFactory extends Factory
             'product_content' => $this->faker->text(200),
             'product_price' => $this->faker->randomFloat(null, 10000, 10000000),
             'product_image' => 'product-demo.jpeg',
-            'product_status' => $this->faker->numberBetween(1, 2),
+            'product_status' => $this->faker->numberBetween(0, 1),
             'quantity' => $this->faker->numberBetween(0, 999),
             'created_at' => now(),
             'updated_at' => now(),

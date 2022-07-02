@@ -24,8 +24,8 @@ class ProductController extends Controller
     {
         //tạo biến có key là info để lấy dữ liệu
         $result['info'] = DB::table('tbl_product')
-            ->join('tbl_category_product', 'tbl_category_product.category_id', '=', 'tbl_product.category_id')
-            ->join('tbl_brand_product', 'tbl_brand_product.brand_id', '=', 'tbl_product.brand_id')
+            ->leftJoin('tbl_category_product', 'tbl_category_product.category_id', '=', 'tbl_product.category_id')
+            ->leftJoin('tbl_brand_product', 'tbl_brand_product.brand_id', '=', 'tbl_product.brand_id')
             ->orderby('tbl_product.product_id', 'desc')->get();
 
         return view('admin.all_product', $result);
