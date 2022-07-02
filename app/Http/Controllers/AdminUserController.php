@@ -10,7 +10,7 @@ use Hash;
 use DB;
 use Session;
 
-Session_start();
+
 
 use Illuminate\Support\Facades\Redirect;
 

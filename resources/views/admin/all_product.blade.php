@@ -41,7 +41,7 @@
                                 </td>
                                 <td>{{ $value->product_name }}</td>
                                 <td>{{ $value->product_price }}</td>
-                                <td><img src='public/upload/product/{{ $value->product_image }}' width='100'
+                                <td><img src='/upload/product/{{ $value->product_image }}' width='100'
                                         height='100' /></td>
                                 <td>{{ $value->Category_name }}</td>
                                 <td>{{ $value->brand_name }}</td>

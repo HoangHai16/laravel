@@ -20,7 +20,7 @@ class CreateTblProduct extends Migration
             $table->string('product_name');
             $table->text('product_desc');
             $table->text('product_content');
-            $table->string('product_price');
+            $table->double('product_price'); // column price chuyen ve double. total, quantity chuyen ve int
             $table->string('product_image');
             $table->integer('product_status');
             $table->timestamps();

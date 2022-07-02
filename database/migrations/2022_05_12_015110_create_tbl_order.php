@@ -18,7 +18,7 @@ class CreateTblOrder extends Migration
             $table->integer('customer_id');
             $table->integer('shipping_id');
             $table->integer('payment_id');
-            $table->float('order_total');
+            $table->double('order_total'); // column price chuyen ve double. total, quantity chuyen ve int
             $table->integer('order_status');
             $table->timestamps();
         });

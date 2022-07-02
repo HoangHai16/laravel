@@ -8,7 +8,7 @@ use Session;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Redirect;
 use Cart;
-Session_start();
+
 
 class CartController extends Controller
 {
